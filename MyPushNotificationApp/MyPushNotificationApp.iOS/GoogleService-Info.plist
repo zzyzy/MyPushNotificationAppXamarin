@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>423500605748-ra0r3hbtu9ra83ntp1r3fga0mb7qfcme.apps.googleusercontent.com</string>
+	<string>423500605748-cv220keqvgbdb13i52nk19rco8rk8t1i.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.423500605748-ra0r3hbtu9ra83ntp1r3fga0mb7qfcme</string>
+	<string>com.googleusercontent.apps.423500605748-cv220keqvgbdb13i52nk19rco8rk8t1i</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBgmwBeLQrh_PXNMMlI5jxbd6CUc_mA1do</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.companyname.mypushnotificationapp</string>
+	<string>com.anacle.testpushnotif</string>
 	<key>PROJECT_ID</key>
 	<string>mypushnotificationapp-46797</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:423500605748:ios:234c575d3e0db6ffbd5d61</string>
+	<string>1:423500605748:ios:2b174ecdcaac936ebd5d61</string>
 </dict>
 </plist>

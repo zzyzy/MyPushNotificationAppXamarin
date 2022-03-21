@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Newtonsoft.Json;
 using Plugin.FirebasePushNotification;
 using UIKit;
 
@@ -27,18 +28,24 @@ namespace MyPushNotificationApp.iOS
             LoadApplication(new App()); 
             FirebasePushNotificationManager.Initialize(options, true);
 
+            CrossFirebasePushNotification.Current.OnNotificationReceived += (source, args) =>
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(args.Data));
+            };
+
             return base.FinishedLaunching(app, options);
         }
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
+            Console.WriteLine($"FCM token: {CrossFirebasePushNotification.Current.Token}");
         }
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
         {
             FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
-
+            Console.WriteLine(error.ToString());
         }
         // To receive notifications in foregroung on iOS 9 and below.
         // To receive notifications in background in any iOS version
