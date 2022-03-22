@@ -27,12 +27,6 @@ namespace MyPushNotificationApp.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App()); 
             FirebasePushNotificationManager.Initialize(options, true);
-
-            CrossFirebasePushNotification.Current.OnNotificationReceived += (source, args) =>
-            {
-                Console.WriteLine(JsonConvert.SerializeObject(args.Data));
-            };
-
             return base.FinishedLaunching(app, options);
         }
 

@@ -40,10 +40,10 @@ namespace MyPushNotificationApp.Droid
 #endif
 
             //Handle notification when app is closed here
-            CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
-            {
-                Console.WriteLine(p.Data);
-            };
+            //CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
+            //{
+            //    Console.WriteLine(p.Data);
+            //};
 
             FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
